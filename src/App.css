@@ -2,18 +2,41 @@
   text-align: center;
 }
 
+table {
+  width: 60%;
+  margin-left: 20%;
+  border: solid black 1px;
+}
+
+.heading{
+  text-align: left;
+  padding-bottom: 10px;
+  border-bottom: 1px black solid;
+}
+thead h1 {
+  display:inline;
+  margin-right: 5px;
+
+}
+thead button {
+  border-radius: 10px;
+  font-size: 16px;
+  padding: 5px;
+}
 
 .member-row {
   display: flex;
-  flex-wrap: nowrap;
-  width: 100%;
-  justify-content: space-around;
-  padding-left: 15px;
-  padding-right: 15px;  
+  border-top: 1px solid black;
+}
+
+td,th {
+  border-right: 1px solid black
 }
 
 .name {
   width: 25%;
+  display: flex;
+  justify-content: center;
 }
 .company {
   width: 25%;

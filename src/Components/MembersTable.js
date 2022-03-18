@@ -72,42 +72,50 @@ export default class MembersTable extends Component {
             onCancel={this.handleCancel}
           />
         ) : (
-          <div>
-            <h1>MembersTable</h1>
-            <div className="members-table">
-              <div className="member-row">
-                <div className="name">
+          <table>
+            <thead>
+              <tr>
+                <th className="heading">
+                  <h1>Team Members</h1>
+                  <button onClick={this.handleAdd}>Add New</button>
+                </th>
+              </tr>
+              <tr className="member-row">
+                <th className="name">
                   <p>Name</p>
-                </div>
-                <div className="company">
+                </th>
+                <th className="company">
                   <p>Company</p>
-                </div>
-                <div className="status">
+                </th>
+                <th className="status">
                   <p>Status</p>
-                </div>
-                <div className="notes">
+                </th>
+                <th className="notes">
                   <p>Notes</p>
-                </div>
-              </div>
+                </th>
+              </tr>
+            </thead>
+
+            <tbody>
               {this.state.members.map((member) => (
-                <div key={member.id} className="member-row">
-                  <div className="name">
+                <tr key={member.id} className="member-row">
+                  <td className="name">
+                    <input type='checkbox'onClick={this.handleChecked}/>
                     <p>{member.name}</p>
-                  </div>
-                  <div className="company">
+                  </td>
+                  <td className="company">
                     <p>{member.company}</p>
-                  </div>
-                  <div className="status">
+                  </td>
+                  <td className="status">
                     <p>{member.status}</p>
-                  </div>
-                  <div className="notes">
+                  </td>
+                  <td className="notes">
                     <p>{member.notes}</p>
-                  </div>
-                </div>
+                  </td>
+                </tr>
               ))}
-            </div>
-            <button onClick={this.handleAdd}>Add New Member</button>
-          </div>
+            </tbody>
+          </table>
         )}
       </>
     );
