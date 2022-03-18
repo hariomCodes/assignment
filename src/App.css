@@ -2,12 +2,25 @@
   text-align: center;
 }
 
-.members-table {
-  display: flex;
-  flex-direction: column;
-}
 
 .member-row {
   display: flex;
-  
+  flex-wrap: nowrap;
+  width: 100%;
+  justify-content: space-around;
+  padding-left: 15px;
+  padding-right: 15px;  
+}
+
+.name {
+  width: 25%;
+}
+.company {
+  width: 25%;
+}
+.status{
+  width: 25%;
+}
+.notes{
+  width: 25%;
 }
